@@ -1,1 +1,2 @@
-au BufNewFile,BufRead *.dc,*.dcpu setf dcpu
+au BufNewFile,BufRead *.dasm16,*.dasm       setfiletype dcpu
+
