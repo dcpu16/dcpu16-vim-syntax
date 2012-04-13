@@ -23,7 +23,7 @@ syn case ignore
 syn match dcpuIdentifier "[a-z_][a-z0-9_]*"
 
 " valid label
-syn match dcpuLabel      "^:[A-Z_][A-Z0-9_]*"
+syn match dcpuLabel      "^[ \t]*:[A-Z_][A-Z0-9_]*"
 syn match dcpuSubLabel   "^:\.[A-Z_][A-Z0-9_]*"
 " me=e-1
 
