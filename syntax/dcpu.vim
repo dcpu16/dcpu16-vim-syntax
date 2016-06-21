@@ -23,8 +23,8 @@ syn case ignore
 syn match dcpuIdentifier "[a-z_][a-z0-9_]*"
 
 " valid label
-syn match dcpuLabel      "^:[A-Z_][A-Z0-9_]*"
-syn match dcpuSubLabel   "^:\.[A-Z_][A-Z0-9_]*"
+syn match dcpuLabel      "^:?[A-Z_][A-Z0-9_]:?*"
+syn match dcpuSubLabel   "^\.[A-Z_][A-Z0-9_]:*"
 " me=e-1
 
 " one character
@@ -52,11 +52,11 @@ syn match dcpuComment    ";.*" contains=dcpuTodo
 syn region dcpuComment   start="/\*" end="\*/"
 
 " registers
-syn keyword dcpuRegister        a b c x y z i j sp pc o pop peek push
+syn keyword dcpuRegister        a b c x y z i j sp pc ex pop peek push pick
 
 " instruction opcodes
-syn keyword dcpuOpcode  set add sub mul div mod shl shr and bor xor ife ifn ifg ifb
-syn keyword dcpuOpcode  jsr
+syn keyword dcpuOpcode  set add sub mul mli div dvi mod and bor xor shr asr shl mvi ifb ifc ife ifn ifg ifa ifl ifu adx sux
+syn keyword dcpuOpcode  jsr int iag ias hwn hwq hwi
 
 " directives
 syn keyword dcpuDirective       word
